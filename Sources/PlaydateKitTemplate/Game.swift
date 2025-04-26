@@ -7,14 +7,11 @@ final class Game: PlaydateGame {
 
     init() {
         logo.addToDisplayList()
-        logo2.moveBy(dx: 22, dy: 22)
-        logo2.addToDisplayList()
     }
 
     // MARK: Internal
 
     let logo = Logo()
-    var logo2 = Logo()
 
     func update() -> Bool {
         Sprite.updateAndDrawDisplayListSprites()

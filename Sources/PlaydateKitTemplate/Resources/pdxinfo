@@ -1,5 +1,5 @@
-name=PlaydateKit Template
-author=Finn Voorhees
-description=An example Playdate game built using PlaydateKit
-bundleID=com.finnvoorhees.PlaydateKitTemplate
+name=playdate-swift-template
+author=Maurice Elliott
+description=A playdate template using swift based on the template of PlaydateKit
+bundleID=com.mauriceelliott.PlaydateKitTemplate
 imagePath=
