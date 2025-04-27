@@ -4,17 +4,13 @@ import PlaydateKit
 
 final class Game: PlaydateGame {
     // MARK: Lifecycle
-
+    let titleText = "Hello My King!"
     init() {
-        logo.addToDisplayList()
+        
     }
 
-    // MARK: Internal
-
-    let logo = Logo()
-
     func update() -> Bool {
-        Sprite.updateAndDrawDisplayListSprites()
+        Graphics.drawText(titleText, at: (Point(x: 200, y: 120)))
         System.drawFPS()
         return true
     }
@@ -24,18 +20,12 @@ final class Game: PlaydateGame {
     }
 }
 
-// MARK: - Logo
-
 class Logo: Sprite.Sprite {
-    // MARK: Lifecycle
-
     override init() {
         super.init()
         image = try! Graphics.Bitmap(path: "logo.png")
         bounds = .init(x: 0, y: 0, width: 400, height: 240)
     }
-
-    // MARK: Internal
 
     override func update() {
         moveBy(dx: 0, dy: sinf(System.elapsedTime * 4))
